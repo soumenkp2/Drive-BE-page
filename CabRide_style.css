@@ -476,6 +476,8 @@ html{
     text-transform: none;
     font-size: 1.5rem;
     padding: 2rem;
+    font-family:'Roboto', sans-serif; 
+    font-weight: 500px;
 }
 .tariff-container h3{
     text-transform: none;
@@ -528,9 +530,8 @@ html{
 .some-faqs p{
     font-size: 15px;
     text-transform: none;
-    font-weight: 700px;
+    font-weight: 500px;
     font-family: 'Poppins', sans-serif;
-    font-style: italic;
     padding: 1.5rem;
 }
 .main-faqs{
