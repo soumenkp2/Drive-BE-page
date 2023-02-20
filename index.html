@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Cabs, Autos & Car Rentals | CabRide</title>
     <link rel="stylesheet" href="CabRide_style.css">
     <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
@@ -18,17 +19,44 @@
         <br> -->
         <header class="header">
             <a href="#" id="logo"><img src="images/DriveBe.png" width="150px"></a>
+            <div class ="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
             <nav class="navbar">
-                <a href="#aboutus">About us</a>
-                <a href="#ourproductsheadings">Why DriveBE</a>
-                <a href="#ourrides">Rides</a>
-                <a href="#getintouch" id="getintouch">Get In Touch</a>
+                <ul>
+                    <li>
+                        <a href="#aboutus" class ="active">About us</a>
+                    </li>
+                    <li>
+                        <a href="#ourproductsheadings">Why DriveBE</a>
+                    </li>
+                    <li>
+                        <a href="#ourrides">Rides</a>
+                    </li>
+                    <li>
+                        <a href="#getintouch" id="getintouch" class="active">Get In Touch</a>
+                    </li>
+                </ul>
+            
             </nav>
             <a href="#" id="menu-bars" class="fas fa-bars"></a>
         </header>
-        <!-- <div class="taxi-image">
-            <img src="images/Book Cabs at ease With.png" alt="" width="100%">
-        </div> -->
+        
+        <script>
+            hamburger = document.querySelector(".hamburger");
+            hamburger.onclick = function()
+            {
+                navbars = document.querySelector(".navbar");
+//                 navbars.addEventListener('click', () => {
+//   drop.forEach(e => e.classList.toggle("active"));
+// })
+                navbars.classList.toggle("active");
+
+            }
+
+        </script>
     </div>
 
     <!-- <div class="taxi-image">
