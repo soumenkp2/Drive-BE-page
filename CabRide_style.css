@@ -47,7 +47,7 @@ html{
     align-items: center;
 }
 .header .navbar a{
-    font-size: 1.7rem;
+    font-size: 2.2rem;
     margin-left: 1rem;
     color: black;
     border-color: rgb(255, 144, 144);
@@ -110,6 +110,10 @@ html{
     }
 }
 @media only screen and (max-width : 900px) {
+    #logo
+    {
+        display: none;
+    }
     .hamburger
     {
         display: block;
