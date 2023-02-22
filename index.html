@@ -10,14 +10,19 @@
     <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="shortcut icon" href="CabRide_logo.png" type="img/x-icon">
+    
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </head>
 <body>
-    <div class="main-container">
-        <!-- <div class="background-text">
-            <h2>Book with <img src="images/DriveBe.png" width="350px"> <span> now ! </span></h2>
-        </div>
-        <br>
-        <br> -->
+
+
+    <!-- <div class="main-container">
+        
         <header class="header">
             <a href="#" id="logo"><img src="images/DriveBe.png" width="150px"></a>
             <div class ="hamburger" data-toggle="collapse" data-target="navbar">
@@ -50,27 +55,71 @@
             hamburger.onclick = function()
             {
                 navbars = document.querySelector(".navbar");
-//                 navbars.addEventListener('click', () => {
-//   drop.forEach(e => e.classList.toggle("active"));
-// })
                 navbars.classList.toggle("active");
 
             }
 
-        </script>
+        </script> -->
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-   
-</div>
+    
+</div> -->
+
 
     <!-- <div class="taxi-image">
         <img src="images/Book Cabs at ease With.png" alt="" width="100%">
     </div> -->
 
+    <div class="bg-cyan-400">
+        <nav class="p-5 bg-white shadow md:flex md:items-center md:justify-between">
+          <div class="flex justify-between items-center ">
+            <span class="text-2xl font-[Poppins] cursor-pointer">
+              <img 
+              src="images/DriveBe.png" width="150px">
+            </span>
+      
+            <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+              <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+            </span>
+          </div>
+      
+          <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+            <li class="mx-4 my-6 md:my-0" onclick="window.location.href='#aboutus'">
+              <a class="text-2xl font-weight-bold font-[Poppins] hover:text-red-500 duration-500" onclick="window.location.href='#aboutus'">About Us</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+              <a href="#" class="text-xl hover:text-cyan-500 duration-500">Why DriveBE</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+              <a href="#" class="text-xl hover:text-cyan-500 duration-500">Our Rides</a>
+            </li>
+            
+      
+            <button class="bg-red-400 text-white font-[Poppins] duration-500 px-6 py-2 mx-4 hover:bg-cyan-500 rounded ">
+              Get in Touch
+            </button>
+      <h2 class=""></h2>
+          </ul>
+        </nav>
+      
+      
+        <script>
+          function Menu(e){
+            let list = document.querySelector('ul');
+            e.name === 'menu' ? (e.name = "close",list.classList.add('top-[100px]') , list.classList.add('opacity-100'),document.getElementById('trustabledrivers').style.marginTop='200px') :( e.name = "menu" ,list.classList.remove('top-[100px]'),list.classList.remove('opacity-100'),document.getElementById('trustabledrivers').style.marginTop='0px')
+          
+
+            
+        
+        }
+        </script>
+      </div>
+
+
     <!-- introbox -->
-    <div class="our-intro" id="trustabledrivers">
+    <div class="our-intro" id="trustabledrivers" style="margin-top: 0px;">
         <div class="our-intro-content">
             
             <div class="innerintro-content" style="">
@@ -361,48 +410,7 @@ Firstly, if you have been involved in an accident and require emergency assistan
      
     
     
-    <!-- <div class="fast-booking">
-        <h1 class="fast-heading">we do best</h1>
-        <h2>than you wish</h2>
-        <div class="inner-fast">
-            <div class="booking-content">
-                <div class="icon-fast">
-                    <span><i class="fas fa-rupee-sign"></i></span>
-                </div>
-                <div class="inner-fast-text">
-                    <h1>cab for every pocket</h1>
-                    <p>From Sedans and SUVs to Luxury cars for special occasions, we have cabs to suit every pocket. You can also go cashless and travel easy.</p>
-                </div>
-            </div>
-            <div class="booking-content">
-                <div class="icon-fast">
-                    <span><i class="fas fa-shield-alt"></i></span>
-                </div>
-                <div class="inner-fast-text">
-                    <h1>Secure and Safer Rides</h1>
-                    <p>Verified drivers, an emergency alert button, and live ride tracking are some of the features that we have in place to ensure you a safe travel experience.</p>
-                </div>
-            </div>
-            <div class="booking-content">
-                <div class="icon-fast">
-                    <span><i class="fas fa-car"></i></span>
-                </div>
-                <div class="inner-fast-text">
-                    <h1>share and express</h1>
-                    <p>To travel with the lowest fares choose CityRide Share. For a faster travel experience we have Share Express on some fixed routes with zero deviations. Choose your ride and zoom away!</p>
-                </div>
-            </div>
-            <div class="booking-content">
-                <div class="icon-fast">
-                    <span><i class="fas fa-music"></i></span>
-                </div>
-                <div class="inner-fast-text">
-                    <h1>in cab entertainment</h1>
-                    <p>Play music, watch videos and a lot more with CityRide Play! Also stay connected even if you are travelling through poor network areas with our free Wi-fi facility.</p>
-                </div>
-            </div>
-        </div>
-    </div> -->
+   
 
     <br>
     <hr>
@@ -413,10 +421,7 @@ Firstly, if you have been involved in an accident and require emergency assistan
         <div class="about-us-content">
             
             <div class="innerproducts-content">
-                <!-- <a><h3
-                    style="align-items: center; text-align: left;
-                    font-weight: 600;  padding: 12px 24px;">Looking for a reliable and convenient way to travel around the city?</h3></a>
-                <br> -->
+               
                 <a><h4
                     style="align-items: center; text-align: left;
                     font-weight: 800; color: black; padding: 6px 12px;">Look no further than DriveBE, your go-to 24x7 cab service provider!
@@ -436,43 +441,7 @@ Firstly, if you have been involved in an accident and require emergency assistan
 
 
 
-    <!-- more reasons to love
-    <div class="our-reasons" id="morelove">
-        <h1 class="heading">More Reasons to Love DriveBE</h1>
-        <div class="our-reasons-content">
-            
-            
-            <div class="our-reasonsinner-content" style="align-items: center; text-align: center;">
-                
-                <img src="images/search.png" alt="" style="align-items: center;text-align: center;" height="100px">
-                <a ><h3
-                    style="align-items: center; text-align: center;
-                    font-weight: 600;color: rgb(255, 255, 255); padding: 12px 24px;">Easy search of cabs</h3></a>
-                
-            </div>
-
-            <div class="our-reasonsinner-content" style="align-items: center; text-align: center;">
-               
-                <img src="images/placeholder.png" alt="" height="100px" style="align-items: center; text-align: center;">
-                <a ><h3
-                    style="align-items: center; text-align: center;
-                    font-weight: 600; color: rgb(255, 255, 255); padding: 12px 24px;">Flexible drop location</h3></a>
-                
-            </div>
-
-            <div class="our-reasonsinner-content" style=" align-items: center; text-align: center;">
-                
-                <img src="images/cab.png" alt="" height="100px" style="align-items: center;">
-                <a ><h3
-                    style="align-items: center; text-align: center;
-                    font-weight: 600; color: rgb(255, 255, 255); padding: 12px 24px;">Hire professional drivers</h3></a>
-                
-            </div>
-
-        
-
-        </div>
-    </div> -->
+    
 
 
     <br>
