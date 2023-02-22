@@ -85,21 +85,23 @@
             </span>
           </div>
       
-          <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
-            <li class="mx-4 my-6 md:my-0" onclick="window.location.href='#aboutus'">
-              <a class="text-2xl font-weight-bold font-[Poppins] hover:text-red-500 duration-500" onclick="window.location.href='#aboutus'">About Us</a>
+          <ul class="md:flex md:items-center z-[-1] md:z-auto md:static bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+            <li class="mx-4 my-6 md:my-0">
+              <a href="#aboutus" class="text-2xl font-weight-bold font-[Poppins] hover:text-red-500 duration-500">About Us</a>
             </li>
             <li class="mx-4 my-6 md:my-0">
-              <a href="#" class="text-xl hover:text-cyan-500 duration-500">Why DriveBE</a>
+              <a href="#ourproducts" class="text-2xl font-weight-bold font-[Poppins] hover:text-red-500 duration-500">Why DriveBE</a>
             </li>
             <li class="mx-4 my-6 md:my-0">
-              <a href="#" class="text-xl hover:text-cyan-500 duration-500">Our Rides</a>
+              <a href="#ourrides" class="text-2xl font-weight-bold font-[Poppins] hover:text-red-500 duration-500">Our Rides</a>
             </li>
             
       
-            <button class="bg-red-400 text-white font-[Poppins] duration-500 px-6 py-2 mx-4 hover:bg-cyan-500 rounded ">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=drivebindia@gmail.com">
+                <button class="bg-red-400 text-white text-3xl font-weight-bold font-[Poppins] duration-500 px-6 py-2 mx-4 hover:bg-cyan-500 rounded " onclick="">
               Get in Touch
             </button>
+            </a>
       <h2 class=""></h2>
           </ul>
         </nav>
@@ -108,7 +110,7 @@
         <script>
           function Menu(e){
             let list = document.querySelector('ul');
-            e.name === 'menu' ? (e.name = "close",list.classList.add('top-[100px]') , list.classList.add('opacity-100'),document.getElementById('trustabledrivers').style.marginTop='200px') :( e.name = "menu" ,list.classList.remove('top-[100px]'),list.classList.remove('opacity-100'),document.getElementById('trustabledrivers').style.marginTop='0px')
+            e.name === 'menu' ? (e.name = "close",list.classList.add('top-[60px]') , list.classList.add('opacity-100'),document.getElementById('trustabledrivers').style.marginTop='0px') :( e.name = "menu" ,list.classList.remove('top-[60px]'),list.classList.remove('opacity-100'),document.getElementById('trustabledrivers').style.marginTop='0px')
           
 
             
@@ -175,10 +177,10 @@ To ensure that our customers have a safe and reliable travel experience, we have
                         <div class="form-heading">
                         <h1><b>Book your query</b></h1>
                     </div>
-                    <div class="form-fields" style="font-weight: bold;">
+                    <div class="form-fields" style="font-weight: bold; color: black;">
                         <input type="text" placeholder="name" id="name" required>
                         <input type="number" placeholder="phone" id="phone" required>
-                        <input type="text" placeholder="date" id="subject" required>
+                        <input type="text" placeholder="subject" id="subject" required>
                         <input type="text" placeholder="city" id="city" required>
                         <input type="text" placeholder="question" height="100px" id="question" required>
                     </div>
@@ -537,9 +539,9 @@ Firstly, if you have been involved in an accident and require emergency assistan
         {
             Email.send({
     Host : "smtp.elasticemail.com",
-    Username : "soumenkp2@gmail.com",
-    Password : "06F369CC82EEEBBB65749AA456DA806A90F2",
-    To : 'soumen.2024ec1031@kiet.edu',
+    Username : "drivebetest@gmail.com",
+    Password : "67A28AE40B615E76E88C01AF51786E869059",
+    To : 'drivebindia@gmail.com',
     From : "soumenkp2@gmail.com",
     Subject : "Enquiry from website -> " + document.getElementById("subject").value,
     Body : "Name : " + document.getElementById("name").value 
